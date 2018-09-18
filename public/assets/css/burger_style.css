@@ -36,3 +36,12 @@ ul {
 .right {
     float: right;
 }
+.left {
+  float:left;
+}
+.burgercontainer {
+  width: 60%;
+  margin: auto;
+  height: 300px;
+  border: 2px solid black;
+}

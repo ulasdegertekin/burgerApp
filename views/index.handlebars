@@ -1,11 +1,22 @@
 <h1>BURGER TYPE</h1>
-<ul>
-	{{#each burgers}} <li>
+<div class="burgercontainer">
+<ul class="left">
+	{{#each burgers}} {{#unless devoured}} <li>
+		
 		{{burger_name}}
+
 		<button class="dev" id={{id}} type="button">DEVOURED!</button>
-	</li>{{#unless devoured}}
-	<li class="right">{{burger_name}}</li> {{/unless}} {{/each}}
+		
+	</li> {{/unless}} 
+	 {{/each}}
 </ul>
+<ul class="right">
+	{{#each burgers}} 
+	{{#if devoured}}
+	<li>{{burger_name}}</li> {{/if}} {{/each}}
+
+</ul>
+</div>
 <form class="create-form">
 	<div class="form-group">
 		<input type="text" id="ca" name="name">
